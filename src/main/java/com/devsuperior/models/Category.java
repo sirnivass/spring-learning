@@ -17,9 +17,7 @@ public class Category{
     private Long id;
     @Column(nullable = false)
     private String name;
-    public Long getId() {
-        return id;
-    }
+
     
     public Category() {
     }
@@ -29,6 +27,7 @@ public class Category{
         this.name = name;
     }
 
+   
     // equals e hashCode são métodos de comparação entre as categorias.
     //Método rápido, que consegue varrer uma coleção enorme!
     @Override
@@ -54,5 +53,13 @@ public class Category{
         } else if (!id.equals(other.id))
             return false;
         return true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
